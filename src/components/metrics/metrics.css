@@ -1,0 +1,39 @@
+    .metric-card {
+      border-radius: 10px;
+      background-color: rgb(255, 255, 255); 
+      padding: 0.5rem;
+    }
+    
+    .metric-icon {
+      width: 25px;
+      height: 25px;
+      font-size: 0.75rem;
+    }
+    
+    .metric-title {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #6c757d;
+      margin-bottom: 0.25rem;
+    }
+    
+    .metric-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #212529;
+      margin-bottom: 0.5rem;
+
+    }
+
+    .text-success {
+      color: #28a745 !important;
+    }
+    
+    .text-danger {
+      color: #dc3545 !important;
+    }
+    
+    .progress-bar {
+      border-radius: 8px;
+    }
+    
