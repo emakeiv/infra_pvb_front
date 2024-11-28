@@ -1,5 +1,5 @@
 {
-      "dailyProfitLoss": [
+      "pnl": [
             {
                   "time": "2024-11-01",
                   "value": 0.98
@@ -121,7 +121,7 @@
                   "value": -1.18
             }
       ],
-      "cumulativeReturns": [
+      "returns": [
             {
                   "time": "2024-11-01",
                   "value": 0.98
@@ -243,7 +243,7 @@
                   "value": -5.02
             }
       ],
-      "netProfitGrowth": [
+      "net": [
             {
                   "time": "2024-11-01",
                   "value": 10098.0

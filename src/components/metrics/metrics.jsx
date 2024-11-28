@@ -5,7 +5,7 @@ import './metrics.css';
 function MetricCards() {
   return (
 
-    <Row className="g-3 mb-4">
+    <Row className="mb-5">
       <Col md={3}>
         <Card className="metric-card shadow-sm border-0">
           <Card.Body className="d-flex align-items-center">
