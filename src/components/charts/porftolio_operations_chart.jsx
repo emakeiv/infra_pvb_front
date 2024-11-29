@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { createChart } from 'lightweight-charts';
+import GranularityToolbar from './buttons/granularity_toolbar';
 import data from '../../data/porfolio_stats.json';
 import './chart.css';
 
@@ -9,6 +10,7 @@ export default function PortfolioOpsHistory() {
   useEffect(() => {
     const options = {
       layout: {
+        fontSize: 15,
         textColor: 'black',
         background: {
           type: 'solid',
@@ -68,10 +70,22 @@ export default function PortfolioOpsHistory() {
 
     chart.timeScale().fitContent();
 
+
+    const handleResize = () => {
+      chart.resize(container.current.clientWidth, container.current.clientHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
     return () => {
+      window.removeEventListener('resize', handleResize);
       chart.remove();
     };
   }, []);
 
-  return <div ref={container} className="general-chart" />;
+  return (
+    <div>
+      <GranularityToolbar/>
+      <div ref={container} className="general-chart" />
+    </div>
+  );
 }

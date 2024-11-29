@@ -1,12 +1,34 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown, Badge, Button } from 'react-bootstrap';
+import { 
+    Navbar, 
+    Container, 
+    Nav, 
+    NavDropdown, 
+    Badge, 
+    Button, 
+    Form, 
+    Row,
+    Col
+} from 'react-bootstrap';
 
 function TopNavbar(){
     return (
         <Navbar bg="light" className="mb-4 shadow-sm" sticky="top" >
             <Container fluid>
                 {/* Brand Name */}
-                <Navbar.Brand>Dashboard</Navbar.Brand>
+                <Navbar.Brand> 
+                    <Form inline>
+                        <Row>
+                            <Col xs="auto">
+                                <Form.Control
+                                type="text"
+                                placeholder="⌕"
+                                className=" mr-sm-2"
+                                />
+                            </Col>
+                        </Row>
+                    </Form>
+                </Navbar.Brand>
                 
                 {/* Right Icons */}
                 <Nav className="ms-auto d-flex align-items-center">

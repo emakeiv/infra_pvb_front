@@ -1,9 +1,11 @@
 
 import { Container, Row, Col } from 'react-bootstrap';
+
+import PortfolioOpsHistory from '../charts/porftolio_operations_chart';
+import MetricsTable from '../tables/performace/main';
 import SideNavBar from '../sidenavbar/sidenavbar';
 import TopNavbar from '../topnavbar/topnavbar';
 import MetricCards from '../metrics/metrics';
-import PortfolioOpsHistory from '../charts/porftolio_operations_chart';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -20,14 +22,15 @@ function Layout() {
             <MetricCards/>
             <Row>
               <Col md={8}>
-                <div className="">
-                  <h3>Operational history</h3>
+                <h3>Operational history</h3>
+                <div className="pt-5"> 
                   <PortfolioOpsHistory/>
                 </div>
               </Col>
               <Col md={4}>
-                <div className="">
-                  <h3>Performance</h3>
+                <h3>Performance</h3>
+                <div className="pt-5"> 
+                  <MetricsTable/>
                 </div>
               </Col>
             </Row>
