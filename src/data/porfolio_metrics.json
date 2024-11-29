@@ -1,0 +1,50 @@
+{
+      "basic": [
+            {
+                  "metric": "Sortino Ratio",
+                  "value": "2.35"
+            },
+            {
+                  "metric": "Sharpe Ratio",
+                  "value": "1.58"
+            },
+            {
+                  "metric": "Value at Risk (VaR)",
+                  "value": "-5.2%"
+            },
+            {
+                  "metric": "Volatility (%)",
+                  "value": "12.4%"
+            },
+            {
+                  "metric": "Max Drawdown",
+                  "value": "-15.7%"
+            },
+            {
+                  "metric": "Alpha",
+                  "value": "+1.5%"
+            },
+            {
+                  "metric": "Beta",
+                  "value": "0.85"
+            },
+            {
+                  "metric": "Tracking Error",
+                  "value": "3.2%"
+            },
+            {
+                  "metric": "Information Ratio",
+                  "value": "0.75"
+            },
+            {
+                  "metric": "Calmar Ratio",
+                  "value": "0.95"
+            },
+            {
+                  "metric": "Turnover Rate",
+                  "value": "20.3%"
+            }
+      ],
+      "extended": [],
+      "full": []
+}

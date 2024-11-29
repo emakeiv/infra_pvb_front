@@ -17,7 +17,7 @@ function TopNavbar(){
             <Container fluid>
                 {/* Brand Name */}
                 <Navbar.Brand> 
-                    <Form inline>
+                    <Form>
                         <Row>
                             <Col xs="auto">
                                 <Form.Control
