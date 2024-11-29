@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { createChart } from 'lightweight-charts';
 import GranularityToolbar from './buttons/granularity_toolbar';
 import data from '../../data/porfolio_stats.json';
+import becnhmark_data from '../../data/benchmark_data.json'
 import './chart.css';
 
 export default function PortfolioOpsHistory() {
@@ -45,7 +46,14 @@ export default function PortfolioOpsHistory() {
     });
     netGrowthSeries.setData(data.net);
 
+    const benchmarkSeries = chart.addLineSeries({
+      color: 'rgba(255, 99, 132, 1)', // RED
+      lineWidth: 2,
+      priceScaleId: 'right',
+    });
+    benchmarkSeries.setData(becnhmark_data.sp500);
     
+
     chart.priceScale('left').applyOptions({
       position: 'left',
       visible: true, 
@@ -57,7 +65,7 @@ export default function PortfolioOpsHistory() {
     });
 
     chart.priceScale('right').applyOptions({
-      mode: 1,
+      mode: 2,
       position: 'right', 
       visible: true, 
       scaleMargins: {

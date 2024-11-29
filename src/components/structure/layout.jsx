@@ -9,6 +9,7 @@ import MetricCards from '../metrics/metrics';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import AllocationTable from '../tables/allocations/main';
 
 function Layout() {
   return (
@@ -31,6 +32,14 @@ function Layout() {
                 <h3>Performance</h3>
                 <div className="pt-5"> 
                   <MetricsTable/>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                <h3>Allocations</h3>
+                <div className="">
+                  <AllocationTable/>
                 </div>
               </Col>
             </Row>
