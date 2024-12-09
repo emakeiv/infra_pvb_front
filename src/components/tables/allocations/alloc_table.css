@@ -1,0 +1,6 @@
+.nav-tabs .nav-link{
+      color:black;
+}
+.nav-tabs .nav-link:not(.active):hover {
+      color: white ;
+}

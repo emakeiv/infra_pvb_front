@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Table, Tabs, Tab } from 'react-bootstrap';
 import data from '../../../data/assets_performance.json';
 
+import './alloc_table.css';
+
 export default function AllocationTable() {
   const [winners, setWinners] = useState([]);
   const [losers, setLosers] = useState([]);
@@ -30,7 +32,7 @@ export default function AllocationTable() {
             <td>{asset.name}</td>
             <td>{asset.price.toFixed(2)}</td>
             <td style={{ color: asset.change > 0 ? 'green' : 'red' }}>
-              {asset.change.toFixed(2)}
+           {asset.change.toFixed(2)}
             </td>
             <td>{asset.sector}</td>
             <td>{asset.allocation}</td>
@@ -42,10 +44,10 @@ export default function AllocationTable() {
 
   return (
       <Tabs defaultActiveKey="winners" id="performance-tabs" className="mb-3">
-        <Tab eventKey="winners" title="Gainers">
+        <Tab eventKey="winners" title="Gainers 🡅">
           {renderTable(winners)}
         </Tab>
-        <Tab eventKey="losers" title="Losers">
+        <Tab eventKey="losers" title="Losers 🡇">
           {renderTable(losers)}
         </Tab>
       </Tabs>
