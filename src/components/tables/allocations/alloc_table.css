@@ -4,3 +4,11 @@
 .nav-tabs .nav-link:not(.active):hover {
       color: white ;
 }
+
+.nav-tabs .nav-link:hover {
+      background-color: #0a58ca;
+      color: white; 
+}
+  
+
+  

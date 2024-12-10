@@ -1,17 +1,16 @@
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-import PortfolioOpsHistory from '../charts/porftolio_operations_chart';
-import MetricsTable from '../tables/performace/main';
-import SideNavBar from '../sidenavbar/sidenavbar';
-import TopNavbar from '../topnavbar/topnavbar';
-import MetricCards from '../metrics/metrics';
+import PortfolioOpsHistory from '../components/charts/porftolio_operations_chart';
+import MetricsTable from '../components/tables/performace/main';
+import SideNavBar from '../components/sidenavbar/sidenavbar';
+import TopNavbar from '../components/topnavbar/topnavbar';
+import MetricCards from '../components/metrics/metrics';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import AllocationTable from '../tables/allocations/alloc_table';
 
-function Layout() {
+import AllocationTable from '../components/tables/allocations/alloc_table';
+
+export default function Dash() {
   return (
     <Container fluid>
       <Row>
@@ -37,7 +36,7 @@ function Layout() {
             </Row>
             <Row>
               <Col md={12}>
-                <h3>Allocations</h3>
+                <h3>Top allocations</h3>
                 <div className="">
                   <AllocationTable/>
                 </div>
@@ -49,4 +48,3 @@ function Layout() {
   );
 }
 
-export default Layout;

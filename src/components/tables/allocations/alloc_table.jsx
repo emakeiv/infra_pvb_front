@@ -22,6 +22,7 @@ export default function AllocationTable() {
           <th>Asset Name</th>
           <th>Price ($)</th>
           <th>Change (%)</th>
+          <th>RoC</th>
           <th>Sector</th>
           <th>Allocation size</th>
         </tr>
@@ -29,11 +30,12 @@ export default function AllocationTable() {
       <tbody>
         {assets.map((asset, index) => (
           <tr key={index}>
-            <td>{asset.name}</td>
+            <td>{asset.roc > 2 ? "🚀" : ""}{asset.name}</td>
             <td>{asset.price.toFixed(2)}</td>
             <td style={{ color: asset.change > 0 ? 'green' : 'red' }}>
            {asset.change.toFixed(2)}
             </td>
+            <td>{asset.roc}</td>
             <td>{asset.sector}</td>
             <td>{asset.allocation}</td>
           </tr>

@@ -13,7 +13,7 @@ function MetricCards() {
               <i className="bi bi-currency-dollar"></i>
             </div>
             <div className="ms-3 text-start">
-              <Card.Title className="metric-title">PnL</Card.Title>
+              <Card.Title className="metric-title">Equity PnL</Card.Title>
               <Card.Text className="metric-value">€24k</Card.Text>
               <span className="text-success small">
                 <i className="bi bi-arrow-up"></i> 5% Daily
@@ -61,7 +61,7 @@ function MetricCards() {
               <i className="bi bi-cash"></i>
             </div>
             <div className="ms-3 text-start">
-              <Card.Title className="metric-title">Total Profit</Card.Title>
+              <Card.Title className="metric-title">Balance</Card.Title>
               <Card.Text className="metric-value">€15k</Card.Text>
               <span className="text-success small">
                 <i className="bi bi-arrow-up"></i> 1% Daily
