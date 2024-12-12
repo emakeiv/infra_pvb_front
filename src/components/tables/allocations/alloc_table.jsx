@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Table, Tabs, Tab } from 'react-bootstrap';
-import data from '../../../data/assets_performance.json';
+import React, { useState, useEffect } from "react";
+import { Table, Tabs, Tab } from "react-bootstrap";
+import data from "../../../data/assets_performance.json";
 
-import './alloc_table.css';
+import "./alloc_table.css";
 
 export default function AllocationTable() {
   const [winners, setWinners] = useState([]);
@@ -11,12 +11,13 @@ export default function AllocationTable() {
   useEffect(() => {
     // Filter data into winners and losers
     const assets = data.assets;
-    setWinners(assets.filter(asset => asset.change > 0));
-    setLosers(assets.filter(asset => asset.change < 0));
+    setWinners(assets.filter((asset) => asset.change > 0));
+    setLosers(assets.filter((asset) => asset.change < 0));
   }, []);
 
   const renderTable = (assets) => (
     <Table responsive striped bordered hover>
+      <caption>List of top performing and underperforming assets</caption>
       <thead>
         <tr>
           <th>Asset Name</th>
@@ -29,11 +30,14 @@ export default function AllocationTable() {
       </thead>
       <tbody>
         {assets.map((asset, index) => (
-          <tr key={index}>
-            <td>{asset.roc > 2 ? "🚀" : ""}{asset.name}</td>
+          <tr className={asset.roc > 2 ? "bg-primary" : ""} key={index}>
+            <td>
+              {asset.roc > 2 ? "🚀" : ""}
+              {asset.name}
+            </td>
             <td>{asset.price.toFixed(2)}</td>
-            <td style={{ color: asset.change > 0 ? 'green' : 'red' }}>
-           {asset.change.toFixed(2)}
+            <td style={{ color: asset.change > 0 ? "green" : "red" }}>
+              {asset.change.toFixed(2)}
             </td>
             <td>{asset.roc}</td>
             <td>{asset.sector}</td>
@@ -45,13 +49,13 @@ export default function AllocationTable() {
   );
 
   return (
-      <Tabs defaultActiveKey="winners" id="performance-tabs" className="mb-3">
-        <Tab eventKey="winners" title="Gainers 🡅">
-          {renderTable(winners)}
-        </Tab>
-        <Tab eventKey="losers" title="Losers 🡇">
-          {renderTable(losers)}
-        </Tab>
-      </Tabs>
+    <Tabs defaultActiveKey="winners" id="performance-tabs" className="mb-3">
+      <Tab eventKey="winners" title="Gainers 🡅">
+        {renderTable(winners)}
+      </Tab>
+      <Tab eventKey="losers" title="Losers 🡇">
+        {renderTable(losers)}
+      </Tab>
+    </Tabs>
   );
 }
