@@ -8,6 +8,7 @@ import Data from "./pages/data";
 import Porfolio from "./pages/porfolio";
 import Strategy from "./pages/strategy";
 import Profile from "./pages/profile";
+import Login from "./pages/login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/portfolio" element={<Porfolio />} />
         <Route path="/strategy" element={<Strategy />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

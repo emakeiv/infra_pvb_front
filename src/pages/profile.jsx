@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Figure from "react-bootstrap/Figure";
 import Dropdown from "react-bootstrap/Dropdown";
 import InputGroup from "react-bootstrap/InputGroup";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -124,6 +125,17 @@ export default function Profile() {
             </Col>
             <Col className="" md={3}>
               <h4>?</h4>
+              <Figure>
+                <Figure.Image
+                  width={171}
+                  height={180}
+                  alt="171x180"
+                  src="holder.js/171x180"
+                />
+                <Figure.Caption>
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </Figure.Caption>
+              </Figure>
             </Col>
           </Row>
         </Col>

@@ -21,6 +21,7 @@ function TopNavbar() {
             <Row>
               <Col xs="auto">
                 <Form.Control
+                  size="lg"
                   type="text"
                   placeholder="⌕"
                   className=" mr-sm-2"
@@ -47,7 +48,7 @@ function TopNavbar() {
             align="end"
           >
             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-            <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
+            <NavDropdown.Item href="/login">Logout</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Container>

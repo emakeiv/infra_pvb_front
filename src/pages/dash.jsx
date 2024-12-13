@@ -5,6 +5,7 @@ import MetricsTable from "../components/tables/performace/main";
 import SideNavBar from "../components/sidenavbar/sidenavbar";
 import TopNavbar from "../components/topnavbar/topnavbar";
 import MetricCards from "../components/metrics/metrics";
+import Footer from "../components/footer/footer";
 
 import AllocationTable from "../components/tables/allocations/alloc_table";
 
@@ -45,6 +46,7 @@ export default function Dash() {
           </Row>
         </Col>
       </Row>
+      <Row></Row>
     </Container>
   );
 }
