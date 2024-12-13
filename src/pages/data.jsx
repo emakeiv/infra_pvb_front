@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 
+import TopNavbar from "../components/topnavbar/topnavbar";
 import SideNavBar from "../components/sidenavbar/sidenavbar";
 
 export default function Data() {
@@ -13,6 +14,7 @@ export default function Data() {
           <SideNavBar />
         </Col>
         <Col className="p-5" md={10}>
+          <TopNavbar />
           <h2>Data</h2>
         </Col>
       </Row>
