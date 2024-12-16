@@ -4,12 +4,12 @@ import {
   Container,
   Nav,
   NavDropdown,
-  Badge,
-  Button,
   Form,
   Row,
   Col,
 } from "react-bootstrap";
+
+import ModalComponent from "../modal/modal";
 
 function TopNavbar() {
   return (
@@ -35,10 +35,7 @@ function TopNavbar() {
         <Nav className="ms-auto d-flex align-items-center">
           {/* Notifications Icon */}
           <Nav.Link href="#notifications">
-            <Button variant="primary">
-              Notifications <Badge bg="secondary">9</Badge>
-              <span className="visually-hidden">unread messages</span>
-            </Button>
+          <ModalComponent/>
           </Nav.Link>
 
           {/* User Icon with Dropdown */}

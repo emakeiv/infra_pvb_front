@@ -1,0 +1,45 @@
+{
+    "notifications": [
+      {
+        "date": "2024/12/01",
+        "message": "Your portfolio value has increased by 2.5% today."
+      },
+      {
+        "date": "2024/12/02",
+        "message": "New updates are available for your saved strategies."
+      },
+      {
+        "date": "2024/12/03",
+        "message": "Market volatility is high today. Check your portfolio performance."
+      },
+      {
+        "date": "2024/12/04",
+        "message": "A dividend payout for XYZ Corp has been added to your account."
+      },
+      {
+        "date": "2024/12/05",
+        "message": "Your subscription will renew on December 15, 2024."
+      },
+      {
+        "date": "2024/12/06",
+        "message": "SP500 benchmark has risen by 1.2% this week."
+      },
+      {
+        "date": "2024/12/07",
+        "message": "A new trading signal has been generated for ABC stock."
+      },
+      {
+        "date": "2024/12/08",
+        "message": "Your risk exposure on the Energy sector has increased."
+      },
+      {
+        "date": "2024/12/09",
+        "message": "Your custom alert for BTC/USD has been triggered."
+      },
+      {
+        "date": "2024/12/10",
+        "message": "Weekly performance report for your portfolio is now available."
+      }
+    ]
+  }
+  
