@@ -1,50 +1,74 @@
 {
       "basic": [
             {
-                  "metric": "Sortino Ratio",
+                  "name": "Sortino Ratio",
                   "value": "2.35"
             },
             {
-                  "metric": "Sharpe Ratio",
+                  "name": "Sharpe Ratio",
                   "value": "1.58"
             },
             {
-                  "metric": "Value at Risk (VaR)",
+                  "name": "Value at Risk (VaR)",
                   "value": "-5.2%"
             },
             {
-                  "metric": "Volatility (%)",
+                  "name": "Volatility (%)",
                   "value": "12.4%"
             },
             {
-                  "metric": "Max Drawdown",
+                  "name": "Max Drawdown",
                   "value": "-15.7%"
             },
             {
-                  "metric": "Alpha",
+                  "name": "Alpha",
                   "value": "+1.5%"
             },
             {
-                  "metric": "Beta",
+                  "name": "Beta",
                   "value": "0.85"
             },
             {
-                  "metric": "Tracking Error",
+                  "name": "Tracking Error",
                   "value": "3.2%"
             },
             {
-                  "metric": "Information Ratio",
+                  "name": "Information Ratio",
                   "value": "0.75"
             },
             {
-                  "metric": "Calmar Ratio",
+                  "name": "Calmar Ratio",
                   "value": "0.95"
             },
             {
-                  "metric": "Turnover Rate",
+                  "name": "Turnover Rate",
                   "value": "20.3%"
             }
       ],
       "extended": [],
-      "full": []
+      "summary": {
+            "daily": [
+                  {
+                        "name": "Equity PnL",
+                        "value": "235",
+                        "change": "5"
+                  },
+                  {
+                        "name": "Open Positions",
+                        "value": "103",
+                        "change": "-2"
+                  },
+                  {
+                        "name": "VaR",
+                        "value": "35.5%"
+                  },
+                  {
+                        "name": "Balance",
+                        "value": "4752",
+                        "change": "1"
+                  }
+            ],
+            "weekly": [],
+            "monthly": []
+      }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Table, Tabs, Tab } from "react-bootstrap";
+import { Table, Tabs, Tab, Button } from "react-bootstrap";
 import data from "../../../data/assets_performance.json";
 
 import "./alloc_table.css";
@@ -17,7 +17,6 @@ export default function AllocationTable() {
 
   const renderTable = (assets) => (
     <Table responsive striped bordered hover>
-      <caption>List of top performing and underperforming assets</caption>
       <thead>
         <tr>
           <th>Asset Name</th>
@@ -49,13 +48,16 @@ export default function AllocationTable() {
   );
 
   return (
-    <Tabs defaultActiveKey="winners" id="performance-tabs" className="mb-3">
-      <Tab eventKey="winners" title="Gainers 🡅">
-        {renderTable(winners)}
-      </Tab>
-      <Tab eventKey="losers" title="Losers 🡇">
-        {renderTable(losers)}
-      </Tab>
-    </Tabs>
+    <div>
+      <Tabs defaultActiveKey="winners" id="performance-tabs" className="mb-3">
+        <Tab eventKey="winners" title="Gainers 🡅">
+          {renderTable(winners)}
+        </Tab>
+        <Tab eventKey="losers" title="Losers 🡇">
+          {renderTable(losers)}
+        </Tab>
+      </Tabs>
+      <Button variant="link">All allocations</Button>
+    </div>
   );
 }
