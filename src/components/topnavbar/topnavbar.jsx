@@ -21,7 +21,7 @@ export default function TopNavbar({ data }) {
         </Form>
         <Nav className="ms-auto d-flex align-items-center">
           <Nav.Link href="#notifications">
-            <ModalComponent notifications={data.notifications} />
+            <ModalComponent notifications={data?.notifications} />
           </Nav.Link>
           <NavDropdown
             title={<i className="bi bi-person-circle fs-4"></i>}

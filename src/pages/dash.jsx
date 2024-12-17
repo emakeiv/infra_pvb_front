@@ -14,11 +14,11 @@ export default function Dash() {
   const [userData, setUserData] = useState([]);
   const [metrics, setMetrics] = useState([]);
   const [performance, setPerformance] = useState([]);
-  const [benchmarkData, setBenchmarkData] = useState([]);
+  const [benchmark, setBenchmarkData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const [userData, metricsData, performance, benchmarkData] =
+      const [user, metrics, performance, benchmark] =
         await Promise.all([
           DataLoader.getUserData(),
           DataLoader.getPortfolioMetrics(),
@@ -26,10 +26,10 @@ export default function Dash() {
           DataLoader.getBenchmarkData(),
         ]);
 
-      setUserData(userData || []);
-      setMetrics(metricsData || []);
+      setUserData(user || []);
+      setMetrics(metrics || []);
       setPerformance(performance || []);
-      setBenchmarkData(benchmarkData || []);
+      setBenchmarkData(benchmark || []);
     }
     fetchData();
   }, []);

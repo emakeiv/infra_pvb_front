@@ -1,8 +1,7 @@
-import React from "react";
 import { Row, Col, Card, ProgressBar } from "react-bootstrap";
 import "./metrics.css";
 
-function MetricCards({ data }) {
+export default function MetricCards({ data }) {
   return (
     <Row className="mb-5">
       {data?.map((metric, index) => {
@@ -54,5 +53,3 @@ function MetricCards({ data }) {
     </Row>
   );
 }
-
-export default MetricCards;

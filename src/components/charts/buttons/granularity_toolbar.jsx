@@ -3,9 +3,35 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 
 export default function GranularityToolbar() {
+  
   const click = (e) => {
-    console.log(`good boy:${e.target.value}`);
+    let timeFrame = "";
+    console.log(`selected:${e.target.value}`);
+
+    switch (e.target.value) {
+      case "1D":
+        timeFrame = "Daily";
+        break;
+      case "1M":
+        timeFrame = "Monthly";
+        break;
+      case "3M":
+        timeFrame = "Quarterly";
+        break;
+      case "1Y":
+        timeFrame = "Yearly";
+        break;
+      case "ALL":
+        timeFrame = "All";
+        break;
+      default:
+        timeFrame = "Custom";
+        break;
+    }
+    console.log(`time frame was set to:${timeFrame}`);
   };
+
+
 
   return (
     <ButtonToolbar aria-label="" className="mb-5">

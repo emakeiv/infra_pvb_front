@@ -11,7 +11,6 @@ export default function AllocationTable({ data }) {
   }, [data]);
 
   const sort = (key) => {
-    console.log(assets);
     const sorted = [...assets].sort((a, b) => {
       return direction === "asc"
         ? a[key] > b[key]
@@ -36,7 +35,7 @@ export default function AllocationTable({ data }) {
           <th>Asset Name</th>
           <th onClick={() => sort("price")}>Price ($)</th>
           <th onClick={() => sort("change")}>Change (%)</th>
-          <th onClick={() => sort("roc")}>RoC</th>
+          <th onClick={() => sort("roc")}>Rate of Change</th>
           <th>Sector</th>
           <th onClick={() => sort("allocation")}> Allocation size</th>
         </tr>
@@ -47,9 +46,11 @@ export default function AllocationTable({ data }) {
           <th colSpan="6">Allocations by peformance</th>
         </tr>
         {assets?.map((asset, index) => (
+          
           <tr className={asset.roc > 2 ? "bg-primary" : ""} key={index}>
             <td>
               {asset.roc > 2 ? "🚀" : ""}
+              {asset.change < 0 && asset.allocation > 10 ? "⚠️": ""}
               {asset.name}
             </td>
             <td>{asset.price.toFixed(2)}</td>
