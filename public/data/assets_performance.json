@@ -1,0 +1,156 @@
+{
+      "assets": [
+            {
+                  "name": "Apple",
+                  "price": 185.67,
+                  "change": 2.45,
+                  "sector": "Technology",
+                  "allocation": "15%",
+                  "roc": 1.32
+            },
+            {
+                  "name": "Tesla",
+                  "price": 251.32,
+                  "change": -4.25,
+                  "sector": "Automobile",
+                  "allocation": "12%",
+                  "roc": -1.69
+            },
+            {
+                  "name": "Microsoft",
+                  "price": 348.90,
+                  "change": 1.75,
+                  "sector": "Technology",
+                  "allocation": "18%",
+                  "roc": 0.50
+            },
+            {
+                  "name": "Amazon",
+                  "price": 142.31,
+                  "change": -1.12,
+                  "sector": "E-commerce",
+                  "allocation": "20%",
+                  "roc": -0.79
+            },
+            {
+                  "name": "Google",
+                  "price": 2918.54,
+                  "change": 0.95,
+                  "sector": "Technology",
+                  "allocation": "10%",
+                  "roc": 0.03
+            },
+            {
+                  "name": "Coca Cola",
+                  "price": 60.21,
+                  "change": -0.23,
+                  "sector": "Consumer Goods",
+                  "allocation": "8%",
+                  "roc": -0.38
+            },
+            {
+                  "name": "Exxon Mobil",
+                  "price": 115.78,
+                  "change": 3.19,
+                  "sector": "Energy",
+                  "allocation": "5%",
+                  "roc": 2.75
+            },
+            {
+                  "name": "Netflix",
+                  "price": 392.45,
+                  "change": -3.21,
+                  "sector": "Entertainment",
+                  "allocation": "6%",
+                  "roc": -0.82
+            },
+            {
+                  "name": "Meta",
+                  "price": 292.13,
+                  "change": 4.32,
+                  "sector": "Technology",
+                  "allocation": "10%",
+                  "roc": 1.48
+            },
+            {
+                  "name": "Pfizer",
+                  "price": 48.91,
+                  "change": -1.75,
+                  "sector": "Healthcare",
+                  "allocation": "4%",
+                  "roc": -3.58
+            },
+            {
+                  "name": "Nike",
+                  "price": 105.54,
+                  "change": 1.54,
+                  "sector": "Consumer Goods",
+                  "allocation": "7%",
+                  "roc": 1.46
+            },
+            {
+                  "name": "Procter & Gamble",
+                  "price": 153.21,
+                  "change": 0.62,
+                  "sector": "Consumer Goods",
+                  "allocation": "6%",
+                  "roc": 0.40
+            },
+            {
+                  "name": "Walmart",
+                  "price": 146.34,
+                  "change": -0.98,
+                  "sector": "Retail",
+                  "allocation": "11%",
+                  "roc": -0.67
+            },
+            {
+                  "name": "Chevron",
+                  "price": 167.21,
+                  "change": 2.14,
+                  "sector": "Energy",
+                  "allocation": "9%",
+                  "roc": 1.28
+            },
+            {
+                  "name": "Intel",
+                  "price": 35.67,
+                  "change": -5.42,
+                  "sector": "Technology",
+                  "allocation": "5%",
+                  "roc": -15.19
+            },
+            {
+                  "name": "Adobe",
+                  "price": 502.45,
+                  "change": 1.87,
+                  "sector": "Technology",
+                  "allocation": "10%",
+                  "roc": 0.37
+            },
+            {
+                  "name": "Ford",
+                  "price": 11.32,
+                  "change": -2.45,
+                  "sector": "Automobile",
+                  "allocation": "3%",
+                  "roc": -21.64
+            },
+            {
+                  "name": "PepsiCo",
+                  "price": 172.34,
+                  "change": 0.78,
+                  "sector": "Consumer Goods",
+                  "allocation": "5%",
+                  "roc": 0.45
+            },
+            {
+                  "name": "AT&T",
+                  "price": 18.43,
+                  "change": -1.15,
+                  "sector": "Telecom",
+                  "allocation": "2%",
+                  "roc": -6.24
+            }
+      ]
+}

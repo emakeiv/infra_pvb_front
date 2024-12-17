@@ -1,15 +1,12 @@
 import React from "react";
 import { Row, Col, Card, ProgressBar } from "react-bootstrap";
 import "./metrics.css";
-import data from "../../data/porfolio_metrics.json";
 
-function MetricCards() {
-  const metrics = data.summary.daily || [];
-
+function MetricCards({ data }) {
   return (
     <Row className="mb-5">
-      {metrics.map((metric, index) => {
-        const change = Number(metric.change);
+      {data?.map((metric, index) => {
+        const change = parseFloat(metric.change);
         const isPositive = change > 0;
 
         return (
@@ -22,8 +19,8 @@ function MetricCards() {
                       {metric.name}
                     </Card.Title>
                     <Card.Text className="metric-value">
-                      {metric.name === "Balance" || metric.name === "Equity PnL"
-                        ? `€${metric.value}`
+                      {metric.name === "VaR"
+                        ? `${metric.value}%`
                         : metric.value}
                     </Card.Text>
                     {metric.change && (

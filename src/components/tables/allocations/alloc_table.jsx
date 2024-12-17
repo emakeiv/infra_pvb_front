@@ -1,34 +1,52 @@
 import React, { useState, useEffect } from "react";
 import { Table, Tabs, Tab, Button } from "react-bootstrap";
-import data from "../../../data/assets_performance.json";
 
 import "./alloc_table.css";
 
-export default function AllocationTable() {
-  const [winners, setWinners] = useState([]);
-  const [losers, setLosers] = useState([]);
-
+export default function AllocationTable({ data }) {
+  const [assets, setAssets] = useState(data?.assets || []);
+  const [direction, setDirection] = useState("asc");
   useEffect(() => {
-    // Filter data into winners and losers
-    const assets = data.assets;
-    setWinners(assets.filter((asset) => asset.change > 0));
-    setLosers(assets.filter((asset) => asset.change < 0));
-  }, []);
+    setAssets(data);
+  }, [data]);
+
+  const sort = (key) => {
+    console.log(assets);
+    const sorted = assets.sort((a, b) => {
+      return direction === "asc"
+        ? a[key] > b[key]
+          ? 1
+          : -1
+        : a[key] < b[key]
+        ? 1
+        : -1;
+    });
+
+    setAssets(sorted);
+    setDirection(direction === "asc" ? "desc" : "asc");
+  };
+
+  const winners = data?.assets?.filter((asset) => asset.change > 0);
+  const losers = data?.assets?.filter((asset) => asset.change < 0);
 
   const renderTable = (assets) => (
     <Table responsive striped bordered hover>
       <thead>
         <tr>
           <th>Asset Name</th>
-          <th>Price ($)</th>
-          <th>Change (%)</th>
-          <th>RoC</th>
+          <th onClick={() => sort("price")}>Price ($)</th>
+          <th onClick={() => sort("change")}>Change (%)</th>
+          <th onClick={() => sort("roc")}>RoC</th>
           <th>Sector</th>
-          <th>Allocation size</th>
+          <th onClick={() => sort("allocation")}> Allocation size</th>
         </tr>
       </thead>
-      <tbody>
-        {assets.map((asset, index) => (
+
+      <tbody className="table-group-divider">
+        <tr>
+          <th colSpan="6">Allocations by peformance</th>
+        </tr>
+        {assets?.map((asset, index) => (
           <tr className={asset.roc > 2 ? "bg-primary" : ""} key={index}>
             <td>
               {asset.roc > 2 ? "🚀" : ""}

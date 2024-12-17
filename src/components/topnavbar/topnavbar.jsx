@@ -3,7 +3,7 @@ import { Navbar, Container, Nav, NavDropdown, Form } from "react-bootstrap";
 
 import ModalComponent from "../modal/modal";
 
-export default function TopNavbar() {
+export default function TopNavbar({ data }) {
   return (
     <Navbar
       bg="light"
@@ -11,17 +11,17 @@ export default function TopNavbar() {
       sticky="top"
     >
       <Container fluid>
-        <Form>
+        <Form className="flex-grow-1">
           <Form.Control
             size="lg"
             type="text"
             placeholder="⌕"
-            className="w-100"
+            className="w-50"
           />
         </Form>
         <Nav className="ms-auto d-flex align-items-center">
           <Nav.Link href="#notifications">
-            <ModalComponent />
+            <ModalComponent notifications={data.notifications} />
           </Nav.Link>
           <NavDropdown
             title={<i className="bi bi-person-circle fs-4"></i>}

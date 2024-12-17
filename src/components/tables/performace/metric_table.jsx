@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Table, Button } from "react-bootstrap";
 
-import data from "../../../data/porfolio_metrics.json";
-
-export default function MetricsTable() {
-  const [metrics, setMetrics] = useState([]);
-  useEffect(() => {
-    setMetrics(data.basic);
-  }, []);
-
+export default function MetricsTable({ data }) {
   return (
     <div>
       <Table responsive>
@@ -19,7 +12,7 @@ export default function MetricsTable() {
           </tr>
         </thead>
         <tbody>
-          {metrics.map(({ name, value }, index) => (
+          {data?.map(({ name, value }, index) => (
             <tr key={index}>
               <td>{name}</td>
               <td>{value}</td>
