@@ -64,7 +64,7 @@ export default function Dash() {
             <Col md={12}>
               <h3>Top allocations</h3>
               <div className="allocations">
-                <AllocationTable data={performance} />
+                <AllocationTable data={performance?.assets} />
               </div>
             </Col>
           </Row>

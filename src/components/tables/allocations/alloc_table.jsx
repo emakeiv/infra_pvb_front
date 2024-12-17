@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { Table, Tabs, Tab, Button } from "react-bootstrap";
 
 import "./alloc_table.css";
 
 export default function AllocationTable({ data }) {
-  const [assets, setAssets] = useState(data?.assets || []);
+  const [assets, setAssets] = useState(data);
   const [direction, setDirection] = useState("asc");
   useEffect(() => {
     setAssets(data);
@@ -12,7 +12,7 @@ export default function AllocationTable({ data }) {
 
   const sort = (key) => {
     console.log(assets);
-    const sorted = assets.sort((a, b) => {
+    const sorted = [...assets].sort((a, b) => {
       return direction === "asc"
         ? a[key] > b[key]
           ? 1
@@ -26,8 +26,8 @@ export default function AllocationTable({ data }) {
     setDirection(direction === "asc" ? "desc" : "asc");
   };
 
-  const winners = data?.assets?.filter((asset) => asset.change > 0);
-  const losers = data?.assets?.filter((asset) => asset.change < 0);
+  const winners = assets?.filter((asset) => asset.change > 0);
+  const losers = assets?.filter((asset) => asset.change < 0);
 
   const renderTable = (assets) => (
     <Table responsive striped bordered hover>
