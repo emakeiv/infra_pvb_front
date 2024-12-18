@@ -8,7 +8,7 @@ import Data from "./pages/data";
 import Porfolio from "./pages/porfolio";
 import Strategy from "./pages/strategy";
 import Profile from "./pages/profile";
-import Login from "./pages/login";
+import Login from "./pages/login/login";
 
 function App() {
   return (

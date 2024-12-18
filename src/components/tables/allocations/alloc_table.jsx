@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Table, Tabs, Tab, Button } from "react-bootstrap";
 
 import "./alloc_table.css";
@@ -9,6 +9,19 @@ export default function AllocationTable({ data }) {
   useEffect(() => {
     setAssets(data);
   }, [data]);
+
+  const click = (key) => {
+    const headers = document.getElementsByClassName("sortable-header");
+    for (let header of headers) {
+      header.classList.remove("highlight-column");
+    }
+    const activeHeader = document.querySelector(`[data-key="${key}"]`);
+    if (activeHeader) {
+      console.log(activeHeader);
+      activeHeader.classList.add("highlight-column");
+    }
+    sort(key);
+  };
 
   const sort = (key) => {
     const sorted = [...assets].sort((a, b) => {
@@ -30,14 +43,39 @@ export default function AllocationTable({ data }) {
 
   const renderTable = (assets) => (
     <Table responsive striped bordered hover>
+      <caption>List of most perfmorming and underperfoming assets in porfolio</caption>
       <thead>
         <tr>
           <th>Asset Name</th>
-          <th onClick={() => sort("price")}>Price ($)</th>
-          <th onClick={() => sort("change")}>Change (%)</th>
-          <th onClick={() => sort("roc")}>Rate of Change</th>
+          <th
+            className="sortable-header"
+            onClick={() => click("price")}
+            data-key="price"
+          >
+            Price ($)
+          </th>
+          <th
+            className="sortable-header"
+            onClick={() => click("change")}
+            data-key="change"
+          >
+            Change (%)
+          </th>
+          <th
+            className="sortable-header"
+            onClick={() => click("roc")}
+            data-key="roc"
+          >
+            Rate of Change
+          </th>
           <th>Sector</th>
-          <th onClick={() => sort("allocation")}> Allocation size</th>
+          <th
+            className="sortable-header"
+            onClick={() => click("allocation")}
+            data-key="allocation"
+          >
+            Allocation
+          </th>
         </tr>
       </thead>
 
@@ -46,11 +84,10 @@ export default function AllocationTable({ data }) {
           <th colSpan="6">Allocations by peformance</th>
         </tr>
         {assets?.map((asset, index) => (
-          
           <tr className={asset.roc > 2 ? "bg-primary" : ""} key={index}>
             <td>
               {asset.roc > 2 ? "🚀" : ""}
-              {asset.change < 0 && asset.allocation > 10 ? "⚠️": ""}
+              {asset.change < 0 && asset.allocation > 10 ? "⚠️" : ""}
               {asset.name}
             </td>
             <td>{asset.price.toFixed(2)}</td>

@@ -10,6 +10,27 @@
   color: white;
 }
 
-.allocations table tr {
+.sortable-header {
   cursor: pointer;
+}
+
+.highlight-column {
+  background-color: #0a58ca;
+  color: white;
+  font-weight: bold;
+}
+
+#performance-tabs-tab-winners {
+  color: #430374;
+}
+
+#performance-tabs-tab-losers {
+  color: #d60d1e;
+}
+
+.sortable-header::after {
+  content: "▼";
+  position: relative;
+  right: -5px;
+  color: #000000;
 }

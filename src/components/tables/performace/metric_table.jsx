@@ -5,6 +5,7 @@ export default function MetricsTable({ data }) {
   return (
     <div>
       <Table responsive>
+        <caption>List of most porfolio metrics</caption>
         <thead>
           <tr>
             <th>Metric</th>
