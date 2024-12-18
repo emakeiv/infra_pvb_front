@@ -1,4 +1,4 @@
-import { Container, Row, Col, Form, Button, Stack } from "react-bootstrap";
+import { Container, Image , Row, Col, Form, Button, Stack } from "react-bootstrap";
 
 import Footer from "../../components/footer/footer";
 import "./login.css";
@@ -6,9 +6,17 @@ import "./login.css";
 export default function Login() {
   return (
     <Container fluid>
-      <Stack gap={2} className="col-md-2 mx-auto">
-        <h2>Login</h2>
+      <Stack gap={2} className="col-md-2 mx-auto ">
+ 
+        
         <Form className="login-control">
+        <Image 
+        src="assets/img/pvb_logo_a.svg" 
+        hight="80"
+        width="80"
+        alt="PVB system logo"
+         />
+         <h2>Login</h2>
           <Form.Group className="mb-3" controlId="email">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="@" />
