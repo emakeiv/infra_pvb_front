@@ -13,7 +13,7 @@
 
 #### 2. Struktūra
   1) **Tenkina standartą** -  ❌ (w3c validator)
-  2) **Semantiniai segmentai** - atlikta su skyriais ir semantiniais komponentais
+  2) **Semantiniai segmentai** - atlikta su skyriais ir semantiniais komponentais(<form>, <table> <nav>) 
   3) **Valdymo meniu** - veikiantys naršymo meniu per React Router.
 
 #### 3. Failai
